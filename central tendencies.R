@@ -1,12 +1,6 @@
 data<-c(1,2,3,3,4,5,6)
-
-#mean of ungrouped data
 mean(data)
-
-#median of ungrouped data
 median(data)
-
-#mode of ungrouped data
 mode1<-function(x){
   unique_x<-unique(x)
   unique_x[which.max(tabulate(match(x, unique_x)))]
@@ -14,13 +8,11 @@ mode1<-function(x){
 mode1(data)
 
 
-#grouped data
+#mean of grouped data
 class<-list(c(0,10), c(10,20), c(20,30), c(30,40), c(40,50))
 fi<-c(4, 7, 9, 6, 4)
 xi<-sapply(class, function(c)(c[1]+c[2])/2)
 sumfi<-sum(fi)
-
-#mean of grouped data
 mean<-sum(xi*fi)/sumfi
 print(mean)
 
